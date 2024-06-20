@@ -1,0 +1,25 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app1-ingress
+  namespace: app1
+  annotations:
+    alb.ingress.kubernetes.io/group.name: "main-ingress"
+    alb.ingress.kubernetes.io/group.order: '10'
+    alb.ingress.kubernetes.io/scheme: internal
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/target-group-attributes: deregistration_delay.timeout_seconds=30
+spec:
+  ingressClassName: alb
+  rules:
+    - http:
+        paths:
+          - path: /app1
+            pathType: Prefix
+            backend:
+              service:
+                name: app1
+                port:
+                  number: 80
