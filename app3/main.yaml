@@ -21,7 +21,7 @@ spec:
         app: app3
     spec:
       containers:
-      - image: hello-world:latest
+      - image: nginx:latest
         name: app3
         ports:
         - containerPort: 80
