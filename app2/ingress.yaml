@@ -6,7 +6,7 @@ metadata:
   namespace: app2
   annotations:
     alb.ingress.kubernetes.io/group.name: "main-ingress"
-    alb.ingress.kubernetes.io/group.order: '10'
+    alb.ingress.kubernetes.io/group.order: '9'
     alb.ingress.kubernetes.io/scheme: internal
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
     alb.ingress.kubernetes.io/target-type: ip
