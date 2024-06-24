@@ -21,7 +21,7 @@ spec:
         app: app3
     spec:
       containers:
-      - image: hello-world:nanoserver-ltsc2022
+      - image: hello-world:latest
         name: app3
         ports:
         - containerPort: 80
