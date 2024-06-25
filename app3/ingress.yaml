@@ -16,7 +16,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /app3
+          - path: /hello
             pathType: Prefix
             backend:
               service:
