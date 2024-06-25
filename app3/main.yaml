@@ -21,7 +21,7 @@ spec:
         app: app3
     spec:
       containers:
-      - image: nginx:latest
+      - image: yeasy/simple-web:latest
         name: app3
         ports:
         - containerPort: 80
