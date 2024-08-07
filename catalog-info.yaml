@@ -65,5 +65,5 @@ spec:
       name: Register
       action: catalog:register
       input:
-        repoContentsUrl: 
+        repoContentsUrl: ''
         catalogInfoPath: '/catalog-info.yaml'
